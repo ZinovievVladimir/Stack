@@ -7,12 +7,14 @@ struct CNode{
 
 class Stack{
   CNode* top;
+  CNode* minList;
  public:
   Stack() {
     top = 0;
+    minList = 0;
   }
   ~Stack();
-  bool push(int);
+  void push(int);
   int& gettop();
   bool pop();
   int min();
