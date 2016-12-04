@@ -44,9 +44,11 @@ bool Stack::pop() {
     CNode *s = top;
     top = top->next;
     delete s;
-    s = minList;
-    minList = minList->next;
-    delete s;
+    if (top->data == minList->data) {
+      s = minList;
+      minList = minList->next;
+      delete s;
+    }
     return true;
   }
   else {
