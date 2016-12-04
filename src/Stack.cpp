@@ -36,7 +36,7 @@ int& Stack::gettop() {
   if (top != 0)
     return top->data;
   else
-    throw 1;
+    throw std::logic_error("Stack is empty!");
 }
 
 bool Stack::pop() {
